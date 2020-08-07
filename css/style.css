@@ -1,0 +1,133 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+body{
+	background-image: url(../img/background.jpg);
+	background-size: cover;
+	background-position: center;
+}
+input{
+	color: #404040;
+}
+.container{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	background-color: rgb(255, 255, 255, 0.2);
+	padding: 10px;
+	width: 500px;
+	border-radius: 3px 3px;
+}
+.form [name="tabs"]{
+	display: none;
+}
+.tab_form{
+	background-color: white;
+	padding: 10px;
+}
+.tab_two_form{
+	background-color: white;
+	padding: 10px;
+}
+.restoration_name{
+	width: 49%;
+	font-size: 16px;
+	border: 1px solid #e9eaea;
+	padding: 12px 14px;
+	margin-bottom: 15px;
+	outline: none;
+}
+.registration_email{
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid #e9eaea;
+	padding: 12px 14px;
+	margin-bottom: 15px;
+	outline: none;
+}
+.restoration_text{
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid #e9eaea;
+	padding: 12px 0 75px 14px;
+	margin-bottom: 15px;
+	outline: none;
+}
+.tab_form input{
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid #e9eaea;
+	padding: 12px 14px;
+	margin-bottom: 22px;
+	outline: none;
+}
+a.button{
+	text-decoration: none;
+	color: #fff;
+	background: rgb(41, 140, 173, 0.8);
+	text-transform: uppercase;
+	display: block;
+	line-height: 35px;
+	text-align: center;
+	position: relative;
+	margin-top: 30px;
+	padding: 5px;
+	z-index: 1; 
+	overflow: hidden;
+}
+a.restoration{
+	text-decoration: none;
+	color: #4d4dff;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 10px;
+}
+label.tab{
+	color: #fff;
+	font-weight: 500;
+	padding: 15px;
+	display: inline-block;
+	cursor: pointer;
+}
+input[name="tabs"]:checked + label{
+	background: #fff;
+	color: #4d4dff;
+}
+#tab-1:checked ~ #form-1,
+#tab-2:checked ~ #form-2{
+	display: block;
+}
+.del{
+	display: none;
+}
+.button::before, .button::after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #27bfdc;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	transition: 0.2s;
+	z-index: -1;
+}
+.button::after{
+	top: 100%;
+	left: 0;
+	background: #36d2ff;
+	transition-delay: 0.2s;
+}
+.button:hover::after{
+	top: 0;
+}
+.button:hover::before{
+	left: 0;
+}
